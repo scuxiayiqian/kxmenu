@@ -29,17 +29,17 @@
  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+ */
 
 
 #import <Foundation/Foundation.h>
-
 @interface KxMenuItem : NSObject
 
 @property (readwrite, nonatomic, strong) UIImage *image;
 @property (readwrite, nonatomic, strong) NSString *title;
 @property (readwrite, nonatomic, weak) id target;
 @property (readwrite, nonatomic) SEL action;
+@property (readwrite, nonatomic) UIColor *bgColor;
 @property (readwrite, nonatomic, strong) UIColor *foreColor;
 @property (readwrite, nonatomic) NSTextAlignment alignment;
 
@@ -63,5 +63,6 @@
 
 + (UIFont *) titleFont;
 + (void) setTitleFont: (UIFont *) titleFont;
-
++ (void) updateContentView;
++ (BOOL) isHidden;
 @end
